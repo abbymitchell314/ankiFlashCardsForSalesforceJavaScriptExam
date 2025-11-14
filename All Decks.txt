@@ -1,0 +1,234 @@
+#separator:tab
+#html:true
+#notetype column:1
+#deck column:2
+#tags column:9
+jsMethods	javaScript::Methods & Objects	console.log()	Outputs a message to the console.	(message)		<code>console.log('hi')</code><br>Output:<br><code>hi</code>		
+jsMethods	javaScript::Methods & Objects	console.error()	Log an error message to the console.	(message, ...optionalParams)		<code>console.error('Something went wrong');</code><br><strong>Output:</strong><br>Error: Something went wrong		
+jsMethods	javaScript::Methods & Objects	console.warn()	Log a warning message to the console.	(message, ...optionalParams)		<code>console.warn('Be careful!');</code><br><strong>Output:</strong><br>Warning: Be careful!		
+jsMethods	javaScript::Methods & Objects	console.table()	Display tabular data as a table in the console.	(tabularData, properties)		<code>console.table([{ name: 'Alice', age: 30 }, { name: 'Bob', age: 25 }]);</code><br><strong>Output:</strong><br>A table with rows Alice (30), Bob (25)	"<img src=""paste-103bb9af9e1e4131e6940f615ca46772cc15cf93.jpg"">"	
+jsMethods	javaScript::Methods & Objects	setTimeout()	Calls a function or evaluates an expression after a specified number of milliseconds.	(callback, delay)	timeout id	<code>setTimeout(() =&gt; console.log('later'), 1000)</code><br>Output:<br><code>Logs 'later' after ~1 second</code>	"<img src=""paste-3059bf1e8d67adefaa6ec58ee25f6ab3e5a2ddca.jpg"">"	
+jsMethods	javaScript::Methods & Objects	setInterval()	Calls a function or evaluates an expression at specified intervals.	(callback, delay)	interval id	<code>setInterval(() =&gt; console.log('tick'), 1000)</code><br>Output:<br><code>Logs 'tick' every second</code>	"<img src=""paste-87b36678a5cfe9ca62188540e5d4eee555e823fd.jpg"">"	
+jsMethods	javaScript::Methods & Objects	clearTimeout()	Clears the timeout set by setTimeout().	(timeoutId)		<code>const id = setTimeout(() =&gt; console.log('x'), 1000);<br>clearTimeout(id);</code><br>Output:<br><code>No 'x' is logged</code>	"<img src=""paste-3059bf1e8d67adefaa6ec58ee25f6ab3e5a2ddca.jpg"">"	
+jsMethods	javaScript::Methods & Objects	clearInterval()	Clears the interval set by setInterval().	(intervalId)		<code>const id = setInterval(() =&gt; console.log('tick'), 1000);<br>clearInterval(id);</code><br>Output:<br><code>Stops further 'tick' logs</code>	"<img src=""paste-87b36678a5cfe9ca62188540e5d4eee555e823fd.jpg"">"	
+jsMethods	javaScript::Methods & Objects	alert()	Displays an alert dialog with a specified message.	(message)		<code>alert('Warning')</code><br>Output:<br><code>Alert dialog showing 'Warning'</code>	"<img src=""paste-6f5949809be2c8406c236d422b38f08786fcf60d.jpg"">"	
+jsMethods	javaScript::Methods & Objects	prompt()	Displays a dialog box that prompts the user for input.	(message, defaultValue)	string or null	<code>prompt('Name?', 'Guest')</code><br>Output:<br><code>User input string or null</code>	"<img src=""paste-c5eef88246b7f082becf9d1279688405c6bde855.jpg"">"	
+jsMethods	javaScript::Methods & Objects	document.getElementById()	Retrieves an element by its ID.	(id)	element or null	<code>document.getElementById('title')</code><br>Output:<br><code>HTMLElement or null</code>		
+jsMethods	javaScript::Methods & Objects	document.querySelector()	Returns the first element that matches a specified CSS selector.	(selector)	element or null	<code>document.querySelector('.item')</code><br>Output:<br><code>HTMLElement with class 'item' or null</code>	"<img src=""paste-e499583da62b8a8711ca92f32fd71c95c9bcd013.jpg"">"	
+jsMethods	javaScript::Methods & Objects	document.createElement()	Creates a new HTML element.	(tagName)	element	<code>document.createElement('div')</code><br>Output:<br><code>&lt;div&gt;&lt;/div&gt; element</code>		
+jsMethods	javaScript::Methods & Objects	addEventListener()	Attaches an event handler to an element.	(type, listener)		<code>button.addEventListener('click', () => console.log('clicked'))</code><br>Output:<br><code>Logs 'clicked' when button is clicked</code>		
+jsMethods	javaScript::Methods & Objects	querySelectorAll()	Returns a static NodeList representing a list of elements.	(selector)	NodeList	<code>document.querySelectorAll('li')</code><br>Output:<br><code>NodeList of all &lt;li&gt; elements</code>	"<img src=""paste-3dc782862d3ea41f17a7f9bf61bb9e01498ccc99.jpg"">"	
+jsMethods	javaScript::Methods & Objects	getElementsByClassName()	Returns a collection of elements with the given class name.	(className)	HTMLCollection	<code>document.getElementByClassName('item')</code><br>Output:<br><code>HTMLCollection of elements with class 'item'</code>		
+jsMethods	javaScript::Methods & Objects	getElementsByTagName()	Returns a live HTMLCollection of elements with the given tag name.	(tagName)	HTMLCollection	<code>document.getElementByTagName('div')</code><br>Output:<br><code>HTMLCollection of all &lt;div&gt; elements</code>		
+jsMethods	javaScript::Methods & Objects	.innerHTML	Gets or sets the HTML content within an element.	N/A	string	<code>element.innerHTML = '&lt;strong&gt;Hi&lt;/strong&gt;'</code><br>Output:<br><code>Element now renders &lt;strong&gt;Hi&lt;/strong&gt;</code>	"<img src=""paste-f3d6155d504754b0dca21beced2f35c18a8fdd81.jpg"">"	
+jsMethods	javaScript::Methods & Objects	textContent	Gets or sets the text content of a node and its descendants.	()	string	<code>element.textContent = 'Hello'</code><br>Output:<br><code>Element now shows: Hello</code>		
+jsMethods	javaScript::Methods & Objects	setAttribute()	Sets the value of an attribute on the specified element.	(name, value)		<code>element.setAttribute('id', 'main')</code><br>Output:<br><code>Element now has id='main'</code>		
+jsMethods	javaScript::Methods & Objects	removeAttribute()	Removes the specified attribute from an element.	(name)		<code>element.removeAttribute('id')</code><br>Output:<br><code>Element no longer has an 'id' attribute</code>		
+jsMethods	javaScript::Methods & Objects	.classList	Provides methods to manipulate the class attributes of an element.	N/A	DOMTokenList	<code>element.classList.add('active')</code><br>Output:<br><code>Element now has class 'active'</code>	"<img src=""paste-54b7458a14c6c7810259d6212486aa231012e4ae.jpg"">"	
+jsMethods	javaScript::Methods & Objects	appendChild()	Appends a node as the last child of a node.	(node)	node	<code>parent.appendChild(child)</code><br>Output:<br><code>child is added as last child of parent</code>		
+jsMethods	javaScript::Methods & Objects	removeChild()	Removes a child node from the DOM.	(node)	node	<code>parent.removeChild(child)</code><br>Output:<br><code>child is removed from parent and returned</code>		
+jsMethods	javaScript::Methods & Objects	.parentNode	Returns the parent node of a specified node.	N/A	node or null	<code>child.parentNode</code><br>Output:<br><code>Parent node of child or null</code>		
+jsMethods	javaScript::Methods & Objects	.nextSibling	Returns the next node at the same hierarchical level.	N/A	node or null	<code>node.nextSibling</code><br>Output:<br><code>Next sibling node or null</code>		
+jsMethods	javaScript::Methods & Objects	.previousSibling	Returns the previous node at the same hierarchical level.	N/A	node or null	<code>node.previousSibling</code><br>Output:<br><code>Previous sibling node or null</code>		
+jsMethods	javaScript::Methods & Objects	confirm()	Displays a dialog box with a specified message and OK/Cancel buttons.	(message)	boolean	<code>confirm('Are you sure?')</code><br>Output:<br><code>true if OK, false if Cancel</code>	"<img src=""paste-fbaf95026321adce3bef88ad90ab4e9e3ef9f5cf.jpg"">"	
+jsMethods	javaScript::Methods & Objects	localStorage.	Provides a way to store key/value pairs permanently in the browser until its manually cleared.	N/A	Storage object	<code>localStorage.setItem('key', 'value')</code><br>Output:<br><code>Key 'key' stored with value 'value'</code>	"<img src=""paste-19a69f5846684e4efdc858e0c2fbfc6fe211bdfc.jpg""><img src=""paste-57be4801cf2319e5d8ce1c7d167a6053c334233e.jpg"">"	
+jsMethods	javaScript::Methods & Objects	sessionStorage.	Similar to localStorage but scoped to a session.	N/A	Storage object	<code>sessionStorage.setItem('key', 'value')</code><br>Output:<br><code>Key 'key' stored for this session</code>	"<img src=""paste-e83717e0a362b9d5d3a2337edfc7ccb3bc59fdb3.jpg""><img src=""paste-9f90497482385143d81e645558c97e7774c3dfc2.jpg"">"	
+jsMethods	javaScript::Methods & Objects	JSON.parse()	Parses a JSON string, converting it to a JavaScript object.	(jsonString)	object or value	"<code>JSON.parse('{\a\"":1}')</code><br>Output:<br><code>{ a: 1 }</code>"""		
+jsMethods	javaScript::Methods & Objects	JSON.stringify()	Converts a JavaScript object into a JSON string.	(value)	string	"<code>JSON.stringify({ a: 1 })</code><br>Output:<br><code>\{\""a\"":1}\""</code>"""		
+jsMethods	javaScript::Methods & Objects	Array.isArray()	Checks if a value is an array.	(value)	boolean	<code>Array.isArray([1, 2, 3])</code><br>Output:<br><code>true</code>		
+jsMethods	javaScript::Methods & Objects	Array.from()	Creates a new array from an array-like or iterable object.	(arrayLike)	array	<code>Array.from('abc')</code><br>Output:<br><code>['a', 'b', 'c']</code>		
+jsMethods	javaScript::Methods & Objects	Array.push()	Adds one or more elements to the end of an array.	(item1, ...items)	number	<code>const arr = [1]; arr.push(2);</code><br>Output:<br><code>arr = [1, 2], return 2</code>		
+jsMethods	javaScript::Methods & Objects	Array.pop()	Removes the last element from an array.	()	element or undefined	<code>const arr = [1, 2]; arr.pop();</code><br>Output:<br><code>Returns 2, arr = [1]</code>		
+jsMethods	javaScript::Methods & Objects	Array.shift()	Removes the first element from an array.	()	element or undefined	<code>const arr = [1, 2]; arr.shift();</code><br>Output:<br><code>Returns 1, arr = [2]</code>		
+jsMethods	javaScript::Methods & Objects	Array.unshift()	Adds one or more elements to the beginning of an array.	(item1, ...items)	number	<code>const arr = [2, 3]; arr.unshift(1);</code><br>Output:<br><code>arr = [1, 2, 3], return 3</code>		
+jsMethods	javaScript::Methods & Objects	Array.splice()	Adds or removes elements from an array.	(start, deleteCount, ...items)	array of removed elements	<code>const arr = [1, 2, 3]; arr.splice(1, 1);</code><br>Output:<br><code>Returns [2], arr = [1, 3]</code>		
+jsMethods	javaScript::Methods & Objects	Array.slice()	Returns a shallow copy of a portion of an array.	(begin, end)	array	<code>[1, 2, 3, 4].slice(1, 3)</code><br>Output:<br><code>[2, 3]</code>		
+jsMethods	javaScript::Methods & Objects	Array.concat()	Combines two or more arrays.	(...arrays)	array	<code>[1, 2].concat([3, 4])</code><br>Output:<br><code>[1, 2, 3, 4]</code>		
+jsMethods	javaScript::Methods & Objects	Array.reverse()	Reverses the order of the elements in an array.	()	array	<code>const arr = [1, 2, 3]; arr.reverse();</code><br>Output:<br><code>arr = [3, 2, 1]</code>		
+jsMethods	javaScript::Methods & Objects	Array.sort()	Sorts the elements of an array and overwrites array.	(compareFn)	array	<code>[3, 1, 2].sort()</code><br>Output:<br><code>[1, 2, 3]</code>	"<img src=""paste-67abb5c428beadf1af60608cffc812f1a1ec146f.jpg""><br>"	
+jsMethods	javaScript::Methods & Objects	Array.indexOf()	Returns the first index at which a given element is found in the array.	(searchElement, fromIndex)	number	<code>['a','b','c'].indexOf('b')</code><br>Output:<br><code>1</code>		
+jsMethods	javaScript::Methods & Objects	Array.lastIndexOf()	Returns the last index at which a given element is found in the array.	(searchElement, fromIndex)	number	<code>['a','b','a'].lastIndexOf('a')</code><br>Output:<br><code>2</code>		
+jsMethods	javaScript::Methods & Objects	Array.includes()	Determines whether an array includes a specific element.	(searchElement, fromIndex)	boolean	<code>[1, 2, 3].includes(2)</code><br>Output:<br><code>true</code>		
+jsMethods	javaScript::Methods & Objects	Array.map()	Creates a new array by applying a function to each element.	(callback)	array	<code>[1, 2, 3].map(n =&gt; n * 2)</code><br>Output:<br><code>[2, 4, 6]</code>		
+jsMethods	javaScript::Methods & Objects	Array.filter()	Creates a new array with elements that satisfy a condition.	(callback)	array	<code>[1, 2, 3, 4].filter(n =&gt; n % 2 === 0)</code><br>Output:<br><code>[2, 4]</code>		
+jsMethods	javaScript::Methods & Objects	Array.reduce()	Applies a function to reduce an array to a single value.	(callback, initialValue)	value	<code>[1, 2, 3].reduce((sum, n) =&gt; sum + n, 0)</code><br>Output:<br><code>6</code>		
+jsMethods	javaScript::Methods & Objects	Array.forEach()	Executes a provided function once for each array element.	(callback)		<code>[1, 2, 3].forEach(n => console.log(n))</code><br>Output:<br><code>Logs 1, then 2, then 3</code>		
+jsMethods	javaScript::Methods & Objects	Array.every()	Checks if all elements in an array pass a test.	(callback)	boolean	<code>[1, 2, 3].every(n => n > 0)</code><br>Output:<br><code>true</code>		
+jsMethods	javaScript::Methods & Objects	Array.some()	Checks if at least one element in an array passes a test.	(callback)	boolean	<code>[1, 2, 3].some(n => n === 2)</code><br>Output:<br><code>true</code>		
+jsMethods	javaScript::Methods & Objects	String.length	Returns the length of a string.	()	number	<code>'hello'.length</code><br>Output:<br><code>5</code>		
+jsMethods	javaScript::Methods & Objects	String.charAt()	Returns the character at a specified index in a string.	(index)	string	<code>'hello'.charAt(1)</code><br>Output:<br><code>e</code>		
+jsMethods	javaScript::Methods & Objects	String.concat()	Combines two or more strings.	(str1, ...strings)	string	<code>'Hello '.concat('World')</code><br>Output:<br><code>Hello World</code>		
+jsMethods	javaScript::Methods & Objects	String.indexOf()	Returns the index of the first occurrence of a specified value in a string.	(searchValue, fromIndex)	number	<code>'hello'.indexOf('l')</code><br>Output:<br><code>2</code>		
+jsMethods	javaScript::Methods & Objects	String.lastIndexOf()	Returns the index of the last occurrence of a specified value in a string.	(searchValue, fromIndex)	number	<code>'hello'.lastIndexOf('l')</code><br>Output:<br><code>3</code>		
+jsMethods	javaScript::Methods & Objects	String.slice()	Extracts a section of a string and returns a new string.	(beginIndex, endIndex)	string	<code>'JavaScript'.slice(4)</code><br>Output:<br><code>Script</code>		
+jsMethods	javaScript::Methods & Objects	String.substring()	Returns a subset of a string between two specified indices.	(start, end)	string	<code>'JavaScript'.substring(0, 4)</code><br>Output:<br><code>Java</code>		
+jsMethods	javaScript::Methods & Objects	String.substr()	Returns the characters in a string beginning at a specified location.	(start, length)	string	<code>'JavaScript'.substr(4, 6)</code><br>Output:<br><code>Script</code>		
+jsMethods	javaScript::Methods & Objects	String.replace()	Replaces a specified value or pattern with another value in a string.	(searchFor, replaceWith)	string	<code>'hello world'.replace('world', 'JS')</code><br>Output:<br><code>hello JS</code>		
+jsMethods	javaScript::Methods & Objects	String.toUpperCase()	Converts a string to uppercase.	()	string	<code>'hello'.toUpperCase()</code><br>Output:<br><code>HELLO</code>		
+jsMethods	javaScript::Methods & Objects	String.toLowerCase()	Converts a string to lowercase.	()	string	<code>'HELLO'.toLowerCase()</code><br>Output:<br><code>hello</code>		
+jsMethods	javaScript::Methods & Objects	String.trim()	Removes whitespace from both ends of a string.	()	string	<code>'  hi  '.trim()</code><br>Output:<br><code>hi</code>		
+jsMethods	javaScript::Methods & Objects	String.split()	Splits a string into an array of substrings based on a specified delimiter.	(separator, limit)	array	<code>'a,b,c'.split(',')</code><br>Output:<br><code>['a', 'b', 'c']</code>		
+jsMethods	javaScript::Methods & Objects	String.match()	Searches a string for a specified pattern and returns the matches.	(regexp)	array or null	<code>'abc123'.match(/\\d+/)</code><br>Output:<br><code>['123']</code>		
+jsMethods	javaScript::Methods & Objects	String.search()	Searches a string for a specified value or regular expression.	(regexp)	number	<code>'abc123'.search(/\\d/)</code><br>Output:<br><code>3</code>		
+jsMethods	javaScript::Methods & Objects	String.includes()	Checks if a string contains another string.	(searchString, position)	boolean	<code>'hello world'.includes('world')</code><br>Output:<br><code>true</code>		
+jsMethods	javaScript::Methods & Objects	String.startsWith()	Checks if a string starts with a specified value.	(searchString, position)	boolean	<code>'JavaScript'.startsWith('Java')</code><br>Output:<br><code>true</code>		
+jsMethods	javaScript::Methods & Objects	String.endsWith()	Checks if a string ends with a specified value.	(searchString, length)	boolean	<code>'JavaScript'.endsWith('Script')</code><br>Output:<br><code>true</code>		
+jsMethods	javaScript::Methods & Objects	String.repeat()	Returns a new string repeated a specified number of times.	(count)	string	<code>'ha'.repeat(3)</code><br>Output:<br><code>hahaha</code>		
+jsMethods	javaScript::Methods & Objects	String.padStart()	Pads a string with a specified character until it reaches a specified length.	(targetLength, padString)	string	<code>'5'.padStart(3, '0')</code><br>Output:<br><code>005</code>		
+jsMethods	javaScript::Methods & Objects	String.padEnd()	Pads a string's end with a specified character until it reaches a specified length.	(targetLength, padString)	string	<code>'5'.padEnd(3, '0')</code><br>Output:<br><code>500</code>		
+jsMethods	javaScript::Methods & Objects	Number.parseInt()	Parses a string argument and returns an integer.	(string, radix)	number	<code>Number.parseInt('42', 10)</code><br>Output:<br><code>42</code>		
+jsMethods	javaScript::Methods & Objects	Number.parseFloat()	Parses a string argument and returns a floating-point number.	(string)	number	<code>Number.parseFloat('3.14')</code><br>Output:<br><code>3.14</code>		
+jsMethods	javaScript::Methods & Objects	Number.isNaN()	Determines whether a value is NaN.	(value)	boolean	<code>Number.isNaN(NaN)</code><br>Output:<br><code>true</code>		
+jsMethods	javaScript::Methods & Objects	Number.isFinite()	Determines whether a value is a finite number.	(value)	boolean	<code>Number.isFinite(10)</code><br>Output:<br><code>true</code>		
+jsMethods	javaScript::Methods & Objects	Number.MAX_VALUE	Represents the maximum numeric value representable in JavaScript.	()	number	<code>Number.MAX_VALUE</code><br>Output:<br><code>1.7976931348623157e+308</code>		
+jsMethods	javaScript::Methods & Objects	Number.MIN_VALUE	Represents the minimum positive numeric value representable in JavaScript.	()	number	<code>Number.MIN_VALUE</code><br>Output:<br><code>5e-324</code>		
+jsMethods	javaScript::Methods & Objects	Math.random()	Returns a random floating-point number between 0 (inclusive) and 1 (exclusive).	()	number	<code>Math.random()</code><br>Output:<br><code>A number like 0.374 (varies)</code>		
+jsMethods	javaScript::Methods & Objects	Math.round()	Rounds a number to the nearest integer.	(x)	number	<code>Math.round(2.6)</code><br>Output:<br><code>3</code>		
+jsMethods	javaScript::Methods & Objects	Math.floor()	Rounds a number down to the nearest integer.	(x)	number	<code>Math.floor(2.6)</code><br>Output:<br><code>2</code>		
+jsMethods	javaScript::Methods & Objects	Math.ceil()	Rounds a number up to the nearest integer.	(x)	number	<code>Math.ceil(2.1)</code><br>Output:<br><code>3</code>		
+jsMethods	javaScript::Methods & Objects	Math.abs()	Returns the absolute value of a number.	(x)	number	<code>Math.abs(-5)</code><br>Output:<br><code>5</code>		
+jsMethods	javaScript::Methods & Objects	Math.pow()	Raises a number to the power of another number.	(base, exponent)	number	<code>Math.pow(2, 3)</code><br>Output:<br><code>8</code>		
+jsMethods	javaScript::Methods & Objects	Math.sqrt()	Returns the square root of a number.	(x)	number	<code>Math.sqrt(9)</code><br>Output:<br><code>3</code>		
+jsMethods	javaScript::Methods & Objects	Math.min()	Returns the smallest of zero or more numbers.	(...values)	number	<code>Math.min(3, 1, 4)</code><br>Output:<br><code>1</code>		
+jsMethods	javaScript::Methods & Objects	Math.max()	Returns the largest of zero or more numbers.	(...values)	number	<code>Math.max(3, 1, 4)</code><br>Output:<br><code>4</code>		
+jsMethods	javaScript::Methods & Objects	Math.sin()	Returns the sine of a number.	(x)	number	<code>Math.sin(Math.PI / 2)</code><br>Output:<br><code>1</code>		
+jsMethods	javaScript::Methods & Objects	Math.cos()	Returns the cosine of a number.	(x)	number	<code>Math.cos(0)</code><br>Output:<br><code>1</code>		
+jsMethods	javaScript::Methods & Objects	Math.tan()	Returns the tangent of a number.	(x)	number	<code>Math.tan(0)</code><br>Output:<br><code>0</code>		
+jsMethods	javaScript::Methods & Objects	Math.PI	Represents the mathematical constant π (pi).	()	number	<code>Math.PI</code><br>Output:<br><code>3.141592653589793</code>		
+jsMethods	javaScript::Methods & Objects	Math.E	Represents the mathematical constant e.	()	number	<code>Math.E</code><br>Output:<br><code>2.718281828459045</code>		
+jsMethods	javaScript::Methods & Objects	Math.log()	Returns the natural logarithm of a number.	(x)	number	<code>Math.log(Math.E)</code><br>Output:<br><code>1</code>		
+jsMethods	javaScript::Methods & Objects	Math.exp()	Returns the value of e raised to the power of a number.	(x)	number	<code>Math.exp(1)</code><br>Output:<br><code>2.718281828459045</code>		
+jsMethods	javaScript::Methods & Objects	Math.random()	Returns a pseudo-random number between 0 and 1.	()	number	<code>Math.random()</code><br>Output:<br><code>A number like 0.82 (varies)</code>		
+jsMethods	javaScript::Methods & Objects	Date()	Creates a new Date object representing the current date and time.	()	Date object	<code>new Date()</code><br>Output:<br><code>Current date and time</code>	"<img src=""paste-5223df594528a4e001ba7e6eec642c7494bdef9b.jpg"">"	
+jsMethods	javaScript::Methods & Objects	Date.now()	Returns the current timestamp.	()	number	<code>Date.now()</code><br>Output:<br><code>Current time in ms since epoch</code>	"<img src=""paste-7382820470d4bfae1c4743428089ad9fb4043876.jpg"">"	
+jsMethods	javaScript::Methods & Objects	Date.getFullYear()	Returns the year of a Date object.	()	number	<code>new Date('2020-01-01').getFullYear()</code><br>Output:<br><code>2020</code>		
+jsMethods	javaScript::Methods & Objects	Date.getMonth()	Returns the month of a Date object (0-11).	()	number	<code>new Date('2020-02-10').getMonth()</code><br>Output:<br><code>1</code>		
+jsMethods	javaScript::Methods & Objects	Date.getDate()	Returns the day of the month of a Date object.	()	number	<code>new Date('2020-02-10').getDate()</code><br>Output:<br><code>10</code>		
+jsMethods	javaScript::Methods & Objects	Date.getHours()	Returns the hour of a Date object (0-23).	()	number	<code>new Date('2020-02-10T15:00:00').getHours()</code><br>Output:<br><code>15</code>		
+jsMethods	javaScript::Methods & Objects	Date.getMinutes()	Returns the minutes of a Date object.	()	number	<code>new Date('2020-02-10T15:30:00').getMinutes()</code><br>Output:<br><code>30</code>		
+jsMethods	javaScript::Methods & Objects	insertBefore()	"<span style=""color: rgb(0, 0, 0);"">inserts an html element before another</span>"	(insertingEl, beforeThisEl)		&lt;code&gt;parent.insertBefore(b, c);&lt;/code&gt;	"<img src=""paste-21b423dc018a0dbe0e0fd08ce8adbe38b5ae6269.jpg"">"	
+Basic Async Coding (type in the answer)	javaScript::Promises	"<table><tbody><tr><td><span style=""color: rgb(36, 41, 46);"">console</span>.<span style=""color: rgb(111, 66, 193);"">log</span>(<span style=""color: rgb(3, 47, 98);"">'start'</span>);</td></tr><tr><td>
+</td></tr><tr><td><span style=""color: rgb(215, 58, 73);""><br>const</span> promise1 <span style=""color: rgb(0, 92, 197);"">=</span> <span style=""color: rgb(215, 58, 73);"">new</span> <span style=""color: rgb(227, 98, 9);"">Promise</span>((resolve, reject) <span style=""color: rgb(0, 92, 197);"">=&gt;</span> {</td></tr><tr><td> <span style=""color: rgb(36, 41, 46);"">&nbsp; &nbsp; &nbsp;console</span>.<span style=""color: rgb(111, 66, 193);"">log</span>(<span style=""color: rgb(0, 92, 197);"">1</span>)</td></tr><tr><td>})</td></tr><tr><td>
+</td></tr><tr><td><span style=""color: rgb(36, 41, 46);"">console</span>.<span style=""color: rgb(111, 66, 193);"">log</span>(<span style=""color: rgb(3, 47, 98);"">'end'</span>);</td></tr></tbody></table>"	start,<br>1,<br>end					
+Basic Async Coding (type in the answer)	javaScript::Promises	"<table><tbody><tr><td><span style=""color: rgb(36, 41, 46);"">console</span>.<span style=""color: rgb(111, 66, 193);"">log</span>(<span style=""color: rgb(3, 47, 98);"">'start'</span>);<br><br></td></tr><tr><td>
+</td></tr><tr><td><span style=""color: rgb(215, 58, 73);"">const</span> promise1 <span style=""color: rgb(0, 92, 197);"">=</span> <span style=""color: rgb(215, 58, 73);"">new</span> <span style=""color: rgb(227, 98, 9);"">Promise</span>((resolve, reject) <span style=""color: rgb(0, 92, 197);"">=&gt;</span> {</td></tr><tr><td> &nbsp; &nbsp; &nbsp;<span style=""color: rgb(36, 41, 46);"">console</span>.<span style=""color: rgb(111, 66, 193);"">log</span>(<span style=""color: rgb(0, 92, 197);"">1</span>)</td></tr><tr><td><span style=""color: rgb(36, 41, 46);"">&nbsp; &nbsp; &nbsp;</span>resolve(<span style=""color: rgb(0, 92, 197);"">2</span>)</td></tr><tr><td> &nbsp; &nbsp; &nbsp;<span style=""color: rgb(36, 41, 46);"">console</span>.<span style=""color: rgb(111, 66, 193);"">log</span>(<span style=""color: rgb(0, 92, 197);"">3</span>)</td></tr><tr><td>})<br><br></td></tr><tr><td>
+</td></tr><tr><td>promise1.<span style=""color: rgb(111, 66, 193);"">then</span>(res <span style=""color: rgb(0, 92, 197);"">=&gt;</span> {</td></tr><tr><td> &nbsp; &nbsp; &nbsp;<span style=""color: rgb(36, 41, 46);"">console</span>.<span style=""color: rgb(111, 66, 193);"">log</span>(res)</td></tr><tr><td>})<br><br></td></tr><tr><td>
+</td></tr><tr><td><span style=""color: rgb(36, 41, 46);"">console</span>.<span style=""color: rgb(111, 66, 193);"">log</span>(<span style=""color: rgb(3, 47, 98);"">'end'</span>);</td></tr></tbody></table>"	start,<br>1,<br>3,<br>end,<br>2					
+Basic Async Coding (type in the answer)	javaScript::Promises	"<table><tbody><tr><td><span style=""color: rgb(36, 41, 46);"">console</span>.<span style=""color: rgb(111, 66, 193);"">log</span>(<span style=""color: rgb(3, 47, 98);"">'start'</span>);</td></tr><tr><td>
+</td></tr><tr><td><span style=""color: rgb(215, 58, 73);""><br>const</span> promise1 <span style=""color: rgb(0, 92, 197);"">=</span> <span style=""color: rgb(215, 58, 73);"">new</span> <span style=""color: rgb(227, 98, 9);"">Promise</span>((resolve, reject) <span style=""color: rgb(0, 92, 197);"">=&gt;</span> {</td></tr><tr><td> &nbsp; &nbsp; &nbsp;<span style=""color: rgb(36, 41, 46);"">console</span>.<span style=""color: rgb(111, 66, 193);"">log</span>(<span style=""color: rgb(0, 92, 197);"">1</span>)</td></tr><tr><td>})</td></tr><tr><td>
+</td></tr><tr><td><br>promise1.<span style=""color: rgb(111, 66, 193);"">then</span>(res <span style=""color: rgb(0, 92, 197);"">=&gt;</span> {</td></tr><tr><td> &nbsp; &nbsp; &nbsp;<span style=""color: rgb(36, 41, 46);"">console</span>.<span style=""color: rgb(111, 66, 193);"">log</span>(<span style=""color: rgb(0, 92, 197);"">2</span>)</td></tr><tr><td>})<br><br></td></tr><tr><td>
+</td></tr><tr><td><span style=""color: rgb(36, 41, 46);"">console</span>.<span style=""color: rgb(111, 66, 193);"">log</span>(<span style=""color: rgb(3, 47, 98);"">'end'</span>);</td></tr></tbody></table>"	start,<br>1,<br>end					
+Basic Async Coding (type in the answer)	javaScript::Promises	"<table><tbody><tr><td><span style=""color: rgb(36, 41, 46);"">console</span>.<span style=""color: rgb(111, 66, 193);"">log</span>(<span style=""color: rgb(3, 47, 98);"">'start'</span>)<br><br></td></tr><tr><td>
+</td></tr><tr><td><span style=""color: rgb(215, 58, 73);"">const</span> <span style=""color: rgb(111, 66, 193);"">fn</span> <span style=""color: rgb(0, 92, 197);"">=</span> () <span style=""color: rgb(0, 92, 197);"">=&gt;</span> (<span style=""color: rgb(215, 58, 73);"">new</span> <span style=""color: rgb(227, 98, 9);"">Promise</span>((resolve, reject) <span style=""color: rgb(0, 92, 197);"">=&gt;</span> {</td></tr><tr><td> <span style=""color: rgb(36, 41, 46);"">&nbsp; &nbsp; &nbsp;console</span>.<span style=""color: rgb(111, 66, 193);"">log</span>(<span style=""color: rgb(0, 92, 197);"">1</span>);</td></tr><tr><td><span style=""color: rgb(36, 41, 46);"">&nbsp; &nbsp; &nbsp;</span>resolve(<span style=""color: rgb(3, 47, 98);"">'success'</span>)</td></tr><tr><td>}))<br><br></td></tr><tr><td>
+</td></tr><tr><td><span style=""color: rgb(36, 41, 46);"">console</span>.<span style=""color: rgb(111, 66, 193);"">log</span>(<span style=""color: rgb(3, 47, 98);"">'middle'</span>);<br><br></td></tr><tr><td>
+</td></tr><tr><td><span style=""color: rgb(111, 66, 193);"">fn</span>().<span style=""color: rgb(111, 66, 193);"">then</span>(res <span style=""color: rgb(0, 92, 197);"">=&gt;</span> {</td></tr><tr><td> &nbsp; &nbsp; &nbsp;<span style=""color: rgb(36, 41, 46);"">console</span>.<span style=""color: rgb(111, 66, 193);"">log</span>(res)</td></tr><tr><td>})<br><br></td></tr><tr><td>
+</td></tr><tr><td><span style=""color: rgb(36, 41, 46);"">console</span>.<span style=""color: rgb(111, 66, 193);"">log</span>(<span style=""color: rgb(3, 47, 98);"">'end'</span>)</td></tr></tbody></table>"	start,<br>middle,<br>1,<br>end,<br>success					
+Basic Async Coding (type in the answer)	javaScript::Promises	"<table><tbody><tr><td><span style=""color: rgb(36, 41, 46);"">console</span>.<span style=""color: rgb(111, 66, 193);"">log</span>(<span style=""color: rgb(3, 47, 98);"">'start'</span>)<br><br></td></tr><tr><td>
+</td></tr><tr><td><span style=""color: rgb(227, 98, 9);"">Promise</span>.<span style=""color: rgb(111, 66, 193);"">resolve</span>(<span style=""color: rgb(0, 92, 197);"">1</span>).<span style=""color: rgb(111, 66, 193);"">then</span>((res) <span style=""color: rgb(0, 92, 197);"">=&gt;</span> {</td></tr><tr><td> &nbsp; &nbsp; &nbsp;<span style=""color: rgb(36, 41, 46);"">console</span>.<span style=""color: rgb(111, 66, 193);"">log</span>(res)</td></tr><tr><td>})<br><br></td></tr><tr><td>
+</td></tr><tr><td><span style=""color: rgb(227, 98, 9);"">Promise</span>.<span style=""color: rgb(111, 66, 193);"">resolve</span>(<span style=""color: rgb(0, 92, 197);"">2</span>).<span style=""color: rgb(111, 66, 193);"">then</span>((res) <span style=""color: rgb(0, 92, 197);"">=&gt;</span> {</td></tr><tr><td> &nbsp; &nbsp; &nbsp;<span style=""color: rgb(36, 41, 46);"">console</span>.<span style=""color: rgb(111, 66, 193);"">log</span>(res)</td></tr><tr><td>})<br><br></td></tr><tr><td>
+</td></tr><tr><td><span style=""color: rgb(36, 41, 46);"">console</span>.<span style=""color: rgb(111, 66, 193);"">log</span>(<span style=""color: rgb(3, 47, 98);"">'end'</span>)</td></tr></tbody></table>"	start,<br>end,<br>1,<br>2					
+Basic Async Coding (type in the answer)	javaScript::Promises	"<table><tbody><tr><td><span style=""color: rgb(36, 41, 46);"">console</span>.<span style=""color: rgb(111, 66, 193);"">log</span>(<span style=""color: rgb(3, 47, 98);"">'start'</span>)<br><br></td></tr><tr><td>
+</td></tr><tr><td><span style=""color: rgb(111, 66, 193);"">setTimeout</span>(() <span style=""color: rgb(0, 92, 197);"">=&gt;</span> {</td></tr><tr><td> &nbsp; &nbsp; &nbsp;<span style=""color: rgb(36, 41, 46);"">console</span>.<span style=""color: rgb(111, 66, 193);"">log</span>(<span style=""color: rgb(3, 47, 98);"">'setTimeout'</span>)</td></tr><tr><td>})<br><br></td></tr><tr><td>
+</td></tr><tr><td><span style=""color: rgb(227, 98, 9);"">Promise</span>.<span style=""color: rgb(111, 66, 193);"">resolve</span>().<span style=""color: rgb(111, 66, 193);"">then</span>(() <span style=""color: rgb(0, 92, 197);"">=&gt;</span> {</td></tr><tr><td> &nbsp; &nbsp; &nbsp;<span style=""color: rgb(36, 41, 46);"">console</span>.<span style=""color: rgb(111, 66, 193);"">log</span>(<span style=""color: rgb(3, 47, 98);"">'resolve'</span>)</td></tr><tr><td>})<br><br></td></tr><tr><td>
+</td></tr><tr><td><span style=""color: rgb(36, 41, 46);"">console</span>.<span style=""color: rgb(111, 66, 193);"">log</span>(<span style=""color: rgb(3, 47, 98);"">'end'</span>)</td></tr></tbody></table>"	start,<br>end,<br>resolve,<br>setTimeout					
+Basic Async Coding (type in the answer)	javaScript::Promises	"<table><tbody><tr><td><span style=""color: rgb(215, 58, 73);"">const</span> promise <span style=""color: rgb(0, 92, 197);"">=</span> <span style=""color: rgb(215, 58, 73);"">new</span> <span style=""color: rgb(227, 98, 9);"">Promise</span>((resolve, reject) <span style=""color: rgb(0, 92, 197);"">=&gt;</span> {</td></tr><tr><td> <span style=""color: rgb(36, 41, 46);"">&nbsp; &nbsp; &nbsp;console</span>.<span style=""color: rgb(111, 66, 193);"">log</span>(<span style=""color: rgb(0, 92, 197);"">1</span>);</td></tr><tr><td> <span style=""color: rgb(111, 66, 193);"">&nbsp; &nbsp; &nbsp;setTimeout</span>(() <span style=""color: rgb(0, 92, 197);"">=&gt;</span> {</td></tr><tr><td> <span style=""color: rgb(36, 41, 46);"">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; console</span>.<span style=""color: rgb(111, 66, 193);"">log</span>(<span style=""color: rgb(3, 47, 98);"">""timerStart""</span>);</td></tr><tr><td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; resolve(<span style=""color: rgb(3, 47, 98);"">""success""</span>);</td></tr><tr><td> <span style=""color: rgb(36, 41, 46);"">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; console</span>.<span style=""color: rgb(111, 66, 193);"">log</span>(<span style=""color: rgb(3, 47, 98);"">""timerEnd""</span>);</td></tr><tr><td>&nbsp; &nbsp; &nbsp; }, <span style=""color: rgb(0, 92, 197);"">0</span>);</td></tr><tr><td> <span style=""color: rgb(36, 41, 46);"">&nbsp; &nbsp; &nbsp;console</span>.<span style=""color: rgb(111, 66, 193);"">log</span>(<span style=""color: rgb(0, 92, 197);"">2</span>);</td></tr><tr><td>});</td></tr><tr><td>
+</td></tr><tr><td>promise.<span style=""color: rgb(111, 66, 193);"">then</span>((res) <span style=""color: rgb(0, 92, 197);"">=&gt;</span> {</td></tr><tr><td> <span style=""color: rgb(36, 41, 46);"">&nbsp; &nbsp; &nbsp;console</span>.<span style=""color: rgb(111, 66, 193);"">log</span>(res);</td></tr><tr><td>});</td></tr><tr><td>
+</td></tr><tr><td><span style=""color: rgb(36, 41, 46);"">console</span>.<span style=""color: rgb(111, 66, 193);"">log</span>(<span style=""color: rgb(0, 92, 197);"">4</span>);</td></tr></tbody></table>"	1,<br>2,<br>4,<br>timerStart,<br>timerEnd,<br>success					
+Basic Async Coding (type in the answer)	javaScript::Promises	"<table><tbody><tr><td><span style=""color: rgb(215, 58, 73);"">const</span> timer1 <span style=""color: rgb(0, 92, 197);"">=</span> <span style=""color: rgb(111, 66, 193);"">setTimeout</span>(() <span style=""color: rgb(0, 92, 197);"">=&gt;</span> {</td></tr><tr><td> <span style=""color: rgb(36, 41, 46);"">&nbsp; &nbsp; &nbsp;console</span>.<span style=""color: rgb(111, 66, 193);"">log</span>(<span style=""color: rgb(3, 47, 98);"">'timer1'</span>);</td></tr><tr><td> </td></tr><tr><td> <span style=""color: rgb(215, 58, 73);"">&nbsp; &nbsp; &nbsp;const</span> promise1 <span style=""color: rgb(0, 92, 197);"">=</span> <span style=""color: rgb(227, 98, 9);"">Promise</span>.<span style=""color: rgb(111, 66, 193);"">resolve</span>().<span style=""color: rgb(111, 66, 193);"">then</span>(() <span style=""color: rgb(0, 92, 197);"">=&gt;</span> {</td></tr><tr><td> <span style=""color: rgb(36, 41, 46);"">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; console</span>.<span style=""color: rgb(111, 66, 193);"">log</span>(<span style=""color: rgb(3, 47, 98);"">'promise1'</span>)</td></tr><tr><td>&nbsp; &nbsp; &nbsp;})</td></tr><tr><td>}, <span style=""color: rgb(0, 92, 197);"">0</span>)<br><br></td></tr><tr><td>
+</td></tr><tr><td><span style=""color: rgb(215, 58, 73);"">const</span> timer2 <span style=""color: rgb(0, 92, 197);"">=</span> <span style=""color: rgb(111, 66, 193);"">setTimeout</span>(() <span style=""color: rgb(0, 92, 197);"">=&gt;</span> {</td></tr><tr><td> <span style=""color: rgb(36, 41, 46);"">&nbsp; &nbsp; &nbsp;console</span>.<span style=""color: rgb(111, 66, 193);"">log</span>(<span style=""color: rgb(3, 47, 98);"">'timer2'</span>)</td></tr><tr><td>}, <span style=""color: rgb(0, 92, 197);"">0</span>)</td></tr></tbody></table>"	timer 1,<br>promise 1,<br>timer 2					
+Basic Async Coding (type in the answer)	javaScript::Promises	"<table><tbody><tr><td><span style=""color: rgb(36, 41, 46);"">console</span>.<span style=""color: rgb(111, 66, 193);"">log</span>(<span style=""color: rgb(3, 47, 98);"">'start'</span>);<br><br></td></tr><tr><td>
+</td></tr><tr><td><span style=""color: rgb(215, 58, 73);"">const</span> promise1 <span style=""color: rgb(0, 92, 197);"">=</span> <span style=""color: rgb(227, 98, 9);"">Promise</span>.<span style=""color: rgb(111, 66, 193);"">resolve</span>().<span style=""color: rgb(111, 66, 193);"">then</span>(() <span style=""color: rgb(0, 92, 197);"">=&gt;</span> {</td></tr><tr><td> <span style=""color: rgb(36, 41, 46);"">&nbsp; &nbsp; &nbsp;console</span>.<span style=""color: rgb(111, 66, 193);"">log</span>(<span style=""color: rgb(3, 47, 98);"">'promise1'</span>);</td></tr><tr><td> &nbsp; &nbsp; &nbsp;<span style=""color: rgb(215, 58, 73);"">const</span> timer2 <span style=""color: rgb(0, 92, 197);"">=</span> <span style=""color: rgb(111, 66, 193);"">setTimeout</span>(() <span style=""color: rgb(0, 92, 197);"">=&gt;</span> {</td></tr><tr><td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;console.<span style=""color: rgb(111, 66, 193);"">log</span>(<span style=""color: rgb(3, 47, 98);"">'timer2'</span>)<br></td></tr><tr><td><span style=""color: rgb(36, 41, 46);"">&nbsp; &nbsp; &nbsp;</span>}, <span style=""color: rgb(0, 92, 197);"">0</span>)</td></tr><tr><td>});<br><br></td></tr><tr><td>
+</td></tr><tr><td><span style=""color: rgb(215, 58, 73);"">const</span> timer1 <span style=""color: rgb(0, 92, 197);"">=</span> <span style=""color: rgb(111, 66, 193);"">setTimeout</span>(() <span style=""color: rgb(0, 92, 197);"">=&gt;</span> {</td></tr><tr><td> &nbsp; &nbsp; &nbsp;<span style=""color: rgb(36, 41, 46);"">console</span>.<span style=""color: rgb(111, 66, 193);"">log</span>(<span style=""color: rgb(3, 47, 98);"">'timer1'</span>)</td></tr><tr><td> &nbsp; &nbsp; &nbsp;<span style=""color: rgb(215, 58, 73);"">const</span> promise2 <span style=""color: rgb(0, 92, 197);"">=</span> <span style=""color: rgb(227, 98, 9);"">Promise</span>.<span style=""color: rgb(111, 66, 193);"">resolve</span>().<span style=""color: rgb(111, 66, 193);"">then</span>(() <span style=""color: rgb(0, 92, 197);"">=&gt;</span> {</td></tr><tr><td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;console.<span style=""color: rgb(111, 66, 193);"">log</span>(<span style=""color: rgb(3, 47, 98);"">'promise2'</span>)<br></td></tr><tr><td><span style=""color: rgb(36, 41, 46);"">&nbsp; &nbsp; &nbsp;</span>})</td></tr><tr><td>}, <span style=""color: rgb(0, 92, 197);"">0</span>)<br><br></td></tr><tr><td>
+</td></tr><tr><td><span style=""color: rgb(36, 41, 46);"">console</span>.<span style=""color: rgb(111, 66, 193);"">log</span>(<span style=""color: rgb(3, 47, 98);"">'end'</span>);</td></tr></tbody></table>"	start,<br>end,<br>promise 1,<br>timer 1,<br>promise 2,<br>timer 2					
+Basic Async Coding (type in the answer)	javaScript::Promises	"<table><tbody><tr><td><span style=""color: rgb(36, 41, 46);"">console</span>.<span style=""color: rgb(111, 66, 193);"">log</span>(<span style=""color: rgb(3, 47, 98);"">'start'</span>);<br><br></td></tr><tr><td>
+</td></tr><tr><td><span style=""color: rgb(215, 58, 73);"">const</span> promise1 <span style=""color: rgb(0, 92, 197);"">=</span> <span style=""color: rgb(215, 58, 73);"">new</span> <span style=""color: rgb(227, 98, 9);"">Promise</span>((resolve, reject) <span style=""color: rgb(0, 92, 197);"">=&gt;</span> {</td></tr><tr><td> <span style=""color: rgb(36, 41, 46);"">&nbsp; &nbsp; &nbsp;console</span>.<span style=""color: rgb(111, 66, 193);"">log</span>(<span style=""color: rgb(0, 92, 197);"">1</span>);</td></tr><tr><td> <span style=""color: rgb(36, 41, 46);"">&nbsp; &nbsp; &nbsp;</span>resolve(<span style=""color: rgb(0, 92, 197);"">2</span>);</td></tr><tr><td>})<br><br></td></tr><tr><td>
+</td></tr><tr><td>promise1.<span style=""color: rgb(111, 66, 193);"">then</span>(res <span style=""color: rgb(0, 92, 197);"">=&gt;</span> {</td></tr><tr><td> &nbsp; &nbsp; &nbsp;<span style=""color: rgb(36, 41, 46);"">console</span>.<span style=""color: rgb(111, 66, 193);"">log</span>(res);</td></tr><tr><td>})<br><br></td></tr><tr><td>
+</td></tr><tr><td><span style=""color: rgb(36, 41, 46);"">console</span>.<span style=""color: rgb(111, 66, 193);"">log</span>(<span style=""color: rgb(3, 47, 98);"">'end'</span>);</td></tr></tbody></table>"	start,<br>1,<br>end,<br>2					
+Basic Async Coding (type in the answer)	javaScript::Promises	"<pre><span style=""color: rgb(0, 0, 0);""><code>console.log(""Start"");
+
+const promise1 = new Promise((resolve) =&gt; {
+  console.log(""Promise started"");
+  resolve(""Resolved"");
+});
+
+promise1.then((result) =&gt; {
+  console.log(result);
+});
+
+console.log(""End"");</code></span></pre>"	Start, Promise started, End, Resolved					
+Basic Async Coding (type in the answer)	javaScript::Promises	"<pre><code><span style=""color: rgb(0, 0, 0);"">const promise2 = new Promise((resolve) =&gt; {
+  resolve(""Resolved 1"");
+});
+
+promise2.then((result) =&gt; {
+  console.log(result);
+  return new Promise((resolve) =&gt; {
+    resolve(""Resolved 2"");
+  });
+}).then((result) =&gt; {
+  console.log(result)</span><span style=""color: rgb(248, 248, 242);"">;</span>
+<span style=""color: rgb(248, 248, 242);"">});</span></code></pre>"	Resolved 1, Resolved 2					
+Basic Async Coding (type in the answer)	javaScript::Promises	"<pre><span style=""color: rgb(0, 0, 0);""><code>const promise3 = Promise.resolve();
+
+promise3
+  .then(() =&gt; {
+    console.log(""Then 1"");
+  })
+  .then(() =&gt; {
+    console.log(""Then 2"");
+  })
+  .then(() =&gt; {
+    console.log(""Then 3"");
+  });</code></span></pre>"	Then 1, Then 2, Then 3					
+Basic Async Coding (type in the answer)	javaScript::Promises	"<pre><span style=""color: rgb(0, 0, 0);""><code>const promise4 = new Promise((_, reject) =&gt; {
+  reject(""Error occurred"");
+});
+
+promise4
+  .then(() =&gt; {
+    console.log(""First then"");
+  })
+  .catch((error) =&gt; {
+    console.log(""Caught:"", error);
+  })
+  .then(() =&gt; {
+    console.log(""Second then"");
+  });</code></span></pre>"	Caught: Error occured, Second then					
+Basic Async Coding (type in the answer)	javaScript::Promises	"<pre><span style=""color: rgb(0, 0, 0);""><code>async function asyncFunc() {
+  console.log(""Async function started"");
+  return ""Async result"";
+}
+
+asyncFunc().then((result) =&gt; {
+  console.log(result);
+});
+
+console.log(""Synchronous log"");</code></span></pre>"	Async function started, Synchronous log, Async result					
+Basic (optional reversed card)	javaScript::Methods & Objects	front	back	add reverse				
+Cloze	javaScript::Methods & Objects	text	back extra					
+Server Side (type in the answer)	javaScript::Server Side	A utility toolkit offering helpful functions for arrays, objects, strings, deep cloning, throttling, debouncing, and more.	Lodash					
+Server Side (type in the answer)	javaScript::Server Side	"A powerful module bundler used mostly on the frontend but configured with Node.js.<br>
+Combines, compresses, and optimizes JS/CSS/Assets for production builds."	Webpack					
+Server Side (type in the answer)	javaScript::Server Side	"A date/time manipulation library used to format, parse, compare, and convert dates.<br>
+(Though becoming less common because it’s now in maintenance mode.)"	Moment					
+Server Side (type in the answer)	javaScript::Server Side	Adds color and styling to text in the terminal—often used for logging.	Chalk					
+Server Side (type in the answer)	javaScript::Server Side	Loads environment variables from a <code>.env</code> file into <code>process.env</code> for config and secret management.	dotenv					
+Server Side (type in the answer)	javaScript::Server Side	A promise-based HTTP client used for making API requests from Node or the browser.	Axios					
+Server Side (type in the answer)	javaScript::Server Side	"An ODM (Object Data Modeling) library that provides schemas and model-based interaction with <span style=""background-color: rgb(0, 0, 0);"">Mongo</span><span style=""background-color: rgb(255, 255, 255);"">DB.</span>"	Mongoose					
+Server Side (type in the answer)	javaScript::Server Side	A modern testing framework with built-in mocking, snapshots, and coverage reporting.	Jest					
+Server Side (type in the answer)	javaScript::Server Side	Automatically restarts your Node.js app during development whenever files change.	Nodemon					
+Basic	javaScript::Server Side	Nodemon	Automatically restarts your Node.js app during development whenever files change.					
+Basic	javaScript::Server Side	Jest	A modern testing framework with built-in mocking, snapshots, and coverage reporting.					
+Basic	javaScript::Server Side	Mongoose	An ODM (Object Data Modeling) library that provides schemas and model-based interaction with MongoDB.					
+Basic	javaScript::Server Side	Axios	A promise-based HTTP client used for making API requests from Node or the browser.					
+Basic	javaScript::Server Side	dotenv	Loads environment variables from a <code>.env</code> file into <code>process.env</code> for config and secret management.					
+Basic	javaScript::Server Side	Chalk	Adds color and styling to text in the terminal—often used for logging.					
+Basic	javaScript::Server Side	Moment	"A date/time manipulation library used to format, parse, compare, and convert dates.<br>
+(Though becoming less common because it’s now in maintenance mode.)"					
+Basic	javaScript::Server Side	Webpack	"A powerful module bundler used mostly on the frontend but configured with Node.js.<br>
+Combines, compresses, and optimizes JS/CSS/Assets for production builds."					
+Basic	javaScript::Server Side	Lodash	A utility toolkit offering helpful functions for arrays, objects, strings, deep cloning, throttling, debouncing, and more.					
+Basic	javaScript::Server Side	Express	"A fast, minimal web framework used to build APIs and web applications.<br>
+Provides routing, middleware, request/response handling, and server utilities."					
+Server Side (type in the answer)	javaScript::Server Side	"A fast, minimal web framework used to build APIs and web applications.<br>
+Provides routing, middleware, request/response handling, and server utilities."	Express					
